@@ -74,3 +74,7 @@ footer{text-align:center;padding:55px 25px;background:#020202;border-top:1px sol
 .image-credit{max-width:1200px;margin:22px auto 0;color:#777;font-size:12px;text-align:center}
 @media(max-width:850px){.hero-product img{height:470px}.real-gallery{grid-template-columns:1fr;max-width:500px}.gallery-photo{min-height:420px}.gallery-photo img{height:400px}}
 @media(max-width:500px){.hero-product img{height:410px}}
+
+.section-intro{color:#888;margin-top:12px;max-width:760px;font-size:14px}
+.products{grid-template-columns:repeat(3,1fr)}
+@media(max-width:850px){.products{grid-template-columns:1fr}}
