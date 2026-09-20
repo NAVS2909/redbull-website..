@@ -1,45 +1,33 @@
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-const toast = document.getElementById("toast");
+const P=[
+["ORIGINAL","RED BULL","The original Red Bull.<br>With the unique combination<br>of high-quality ingredients.","#168cff","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/ad3b2bd89c/us_ed_250ml_energy-drink_country_rgb__cold_closed_front_com_25.png/m/168x0"],
+["SUGARFREE","RED BULL","The distinctive Red Bull taste without sugar.","#a8c5e8","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/e54b40774e/us_sf_250ml_sugarfree_country_rgb__cold_closed_front_com_25.png/m/168x0"],
+["ZERO","RED BULL","A zero-sugar Red Bull option.","#85899a","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/deda1afb1a/us_zr_250ml_zero_country_rgb_packrq-1775_cold_closed_front_com_25.png/m/168x0"],
+["SUMMER","SUMMER EDITION","Sudachi Lime.","#ff5147","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/f49ccb7907/us_sl_250ml_ac_the-summer-edition_country_rgb_packrq-3659_cold_closed_front_com_full.png/m/352x0"],
+["APPLE","APPLE EDITION","Fuji Apple & Ginger.","#69d84e","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/0931ffd0d1/us_fai_250ml_ac_the-apple-edition_country_rgb_niti8-226_cold_closed_front_com_25.png/m/352x0"],
+["ICED","ICED EDITION","Iced Vanilla Berry.","#36aaff","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/ff40331efd/us_igb_250ml_ac_the-iced-edition_country_rgb_packrq-3370_cold_closed_front_com_full.png/m/352x0"],
+["PEACH","PEACH EDITION","White Peach.","#ff9e42","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/a305efe037/us_wp_250ml_ac_the-peach-edition_country_rgb_packrq-3055_cold_closed_front_com_full.png/m/352x0"],
+["PINK","PINK EDITION","Wild Berries.","#ff45a6","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/b44f42cfb0/us_ff_250ml_the-pink-edition_country_rgb_packrq-2064_cold_closed_front_com_full.png/m/352x0"],
+["AMBER","AMBER EDITION","Strawberry & Apricot.","#ff9a3a","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/51b3b7127e/us_as_250ml_the-amber-edition_country_rgb__cold_closed_front_com_full.png/m/352x0"],
+["SEA BLUE","SEA BLUE EDITION","Juneberry.","#37c6f3","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/31141b9a15/us_jb_250ml_the-sea-blue-edition_country_rgb_do242582_cold_closed_front_com_25.png/m/352x0"],
+["COCONUT","COCONUT EDITION","Coconut & Berry.","#d8e5ef","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/c076e29890/us_cc_250ml_ac_the-coconut-edition_country_rgb__cold_closed_front_com_full.png/m/352x0"],
+["YELLOW","YELLOW EDITION","Tropical Fruits.","#f4c72a","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/50f9e68454/us_yl_250ml_the-yellow-edition_country_rgb__cold_closed_front_com_25.png/m/352x0"],
+["RED","RED EDITION","Watermelon.","#ef3340","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/7d77a8f904/us_wm_250ml_ac_the-red-edition_country_rgb__cold_closed_front_com_25.png/m/352x0"],
+["SUMMER SUGARFREE","SUMMER EDITION","Sugarfree Summer Edition.","#70aee8","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/79afbb6187/us_sf-sl_250ml_ac_the-summer-edition-sugarfree_country_rgb_packrq-3763_cold_closed_front_com_25.png/m/168x0"],
+["ICED SUGARFREE","ICED EDITION","Sugarfree Iced Vanilla Berry.","#79b8ee","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/8c39bc6dc2/us_sf-igb_250ml_ac_the-iced-edition-sugarfree_country_rgb_packrq-3371_cold_closed_front_com_full.png/m/168x0"],
+["PEACH SUGARFREE","PEACH EDITION","Sugarfree White Peach.","#ffc184","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/b80a915d72/us_sf-wp_250ml_ac_the-peach-edition-sugarfree_country_rgb_packrq-3056_cold_closed_front_com_full.png/m/168x0"],
+["PINK SUGARFREE","PINK EDITION","Sugarfree Wild Berries.","#ff79bd","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/54293be9a2/us_sf-ff_250ml_the-pink-edition-sugarfree_country_rgb__cold_closed_front_com_25.png/m/168x0"],
+["SEA BLUE SUGARFREE","SEA BLUE EDITION","Sugarfree Juneberry.","#67d8f3","https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/d52df1907a/us_sf-jb_250ml_ac_the-sea-blue-edition-sugarfree_country_rgb_packrq-2269_cold_closed_front_com_full.png/m/168x0"]
+];
+let i=0;const $=x=>document.getElementById(x);
+function theme(){let p=P[i],h=p[3].slice(1),r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);document.documentElement.style.setProperty("--a","#ed1b2f");document.documentElement.style.setProperty("--rgb","237,27,47");$("edition").textContent=p[0];$("title").textContent=p[1];$("desc").innerHTML=p[2];$("count").textContent=i+1;$("mainCan").src=p[4];}
+function carousel(){let t=$("track");t.innerHTML="";P.forEach((p,n)=>{let d=document.createElement("div");d.className="flavor"+(n===i?" active":"");d.innerHTML=`<img src="${p[4]}" alt="${p[0]}"><small>${p[0]}</small>`;d.onclick=()=>go(n);t.appendChild(d)});const step=window.innerWidth<=520?71:window.innerWidth<=900?80:100;const shift=(i-(P.length-1)/2)*step;t.style.setProperty("--shift",shift+"px");let dots=$("dots");dots.innerHTML="";for(let n=0;n<6;n++){let d=document.createElement("span");d.className="dot"+(Math.floor(i/(P.length/6))===n?" on":"");dots.appendChild(d)}}
+function go(n){n=(n+P.length)%P.length;if(n===i)return;let c=$("can");c.classList.add("exit");setTimeout(()=>{i=n;theme();c.classList.remove("exit");void c.offsetWidth;c.classList.add("enter");carousel();setTimeout(()=>c.classList.remove("enter"),700)},260)}
+$("nextMain").onclick=()=>go(i+1);$("nextSide").onclick=()=>go(i+1);$("next").onclick=()=>go(i+1);$("prev").onclick=()=>go(i-1);
+theme();carousel();
+P.forEach(p=>{let im=new Image();im.src=p[4]});
+$("menu").onclick=()=>$("nav").classList.toggle("open");
+document.querySelectorAll("#nav a").forEach(a=>a.onclick=()=>$("nav").classList.remove("open"));
+$("form").onsubmit=e=>{e.preventDefault();$("toast").textContent="Thanks! Your message was received for this school-project demo.";$("toast").classList.add("show");e.target.reset();setTimeout(()=>$("toast").classList.remove("show"),3000)};
+const grid=$("productsGrid");P.forEach((p,n)=>{let d=document.createElement("article");d.className="product";d.innerHTML=`<img src="${p[4]}" alt="${p[0]} Red Bull"><h3>${p[0]}</h3><p>${p[2].replaceAll("<br>"," ")}</p><button>VIEW FLAVOR</button>`;d.querySelector("button").onclick=()=>{go(n);location.hash="home"};grid.appendChild(d)});
 
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-  menuBtn.textContent = navLinks.classList.contains("open") ? "✕" : "☰";
-});
-
-document.querySelectorAll(".links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuBtn.textContent = "☰";
-  });
-});
-
-function productInfo(product) {
-  showToast(product + " selected — thanks for exploring the range!");
-}
-
-function showToast(message) {
-  toast.textContent = message;
-  toast.classList.add("show");
-  setTimeout(() => toast.classList.remove("show"), 3000);
-}
-
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  if (name) {
-    showToast(`Thanks, ${name}! Your message has been received.`);
-    this.reset();
-  }
-});
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+window.addEventListener("resize",carousel);

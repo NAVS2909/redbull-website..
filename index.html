@@ -1,45 +1,89 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Red Bull Gives You Wings</title><link rel="stylesheet" href="style.css"></head><body>
-<header class="header"><nav class="nav">
-<a class="brand" href="#home"><span class="brand-mark">🐂</span><span><b>RED</b> BULL</span></a>
-<button class="menu" id="menuBtn">☰</button>
-<ul class="links" id="navLinks"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#products">Products</a></li><li><a href="#experience">Experience</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li></ul>
-</nav></header>
-<main>
-<section class="hero" id="home"><div class="hero-glow"></div><div class="hero-copy reveal">
-<p class="eyebrow">RED BULL ENERGY DRINK</p><h1>GIVES YOU <span>WINGS.</span></h1>
-<p class="lead">Energy for your next move. Discover the brand behind one of the world's most recognisable energy drinks.</p>
-<div class="actions"><a class="btn primary" href="#products">Explore Products</a><a class="btn ghost" href="#about">Discover the Brand</a></div></div>
-<div class="hero-product reveal"><div class="image-glow"></div>
-<img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/ad3b2bd89c/us_ed_250ml_energy-drink_country_rgb__cold_closed_front_com_25.png/m/168x0" alt="Red Bull Energy Drink can">
-<p>ENERGY • FOCUS • ACTION</p></div></section>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Red Bull educational advertising website project">
+<title>Red Bull — Gives You Wings</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="#home"><div class="brand-name">RED BULL</div><div class="brand-tag">GIVES YOU WINGS</div></a>
+  <nav id="nav"><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#products">FLAVORS</a><a href="#experience">EXPERIENCE</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a></nav>
+  <button class="menu" id="menu">☰</button>
+</header>
 
-<section class="stats"><div><strong>1987</strong><span>Brand launched</span></div><div><strong>WINGS</strong><span>Iconic slogan</span></div><div><strong>GLOBAL</strong><span>Worldwide presence</span></div><div><strong>ACTION</strong><span>Sports & culture</span></div></section>
-
-<section class="section" id="about"><div class="section-heading reveal"><p class="eyebrow">THE BRAND</p><h2>BUILT FOR PEOPLE<br><span>WHO MOVE.</span></h2></div>
-<div class="about-grid"><div class="about-text reveal"><p>Red Bull is an energy drink brand founded in 1987. The brand is widely recognised for its distinctive identity and its involvement in sports, racing, adventure, music and entertainment.</p><p>This school project presents Red Bull as an advertising campaign, showing how strong branding, visual design and a clear message can create a memorable customer experience.</p><a class="text-link" href="#experience">See the experience →</a></div>
-<div class="quote-card reveal"><div class="rings"></div><p>“GIVES YOU WINGS.”</p><span>— Brand slogan</span></div></div></section>
-
-<section class="section dark" id="products">
-<div class="section-heading reveal"><p class="eyebrow">REAL PRODUCT PHOTOS</p><h2>FIND YOUR <span>FLAVOR.</span></h2>
-<p class="section-intro">Explore the Red Bull range. Seasonal products and availability can differ by country.</p></div>
-<div class="products"><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/ad3b2bd89c/us_ed_250ml_energy-drink_country_rgb__cold_closed_front_com_25.png/m/168x0" alt="Original Red Bull can"></div><h3>Original Red Bull</h3><p>Classic Red Bull Energy Drink</p><button onclick="productInfo('Original Red Bull')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/e54b40774e/us_sf_250ml_sugarfree_country_rgb__cold_closed_front_com_25.png/m/168x0" alt="Red Bull Sugarfree can"></div><h3>Red Bull Sugarfree</h3><p>Classic taste without sugar</p><button onclick="productInfo('Red Bull Sugarfree')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/deda1afb1a/us_zr_250ml_zero_country_rgb_packrq-1775_cold_closed_front_com_25.png/m/168x0" alt="Red Bull Zero can"></div><h3>Red Bull Zero</h3><p>Zero sugar</p><button onclick="productInfo('Red Bull Zero')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/f49ccb7907/us_sl_250ml_ac_the-summer-edition_country_rgb_packrq-3659_cold_closed_front_com_full.png/m/352x0" alt="Summer Edition can"></div><h3>Summer Edition</h3><p>Sudachi Lime</p><button onclick="productInfo('Summer Edition')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/0931ffd0d1/us_fai_250ml_ac_the-apple-edition_country_rgb_niti8-226_cold_closed_front_com_25.png/m/352x0" alt="Apple Edition can"></div><h3>Apple Edition</h3><p>Fuji Apple & Ginger</p><button onclick="productInfo('Apple Edition')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/ff40331efd/us_igb_250ml_ac_the-iced-edition_country_rgb_packrq-3370_cold_closed_front_com_full.png/m/352x0" alt="Iced Edition can"></div><h3>Iced Edition</h3><p>Iced Vanilla Berry</p><button onclick="productInfo('Iced Edition')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/a305efe037/us_wp_250ml_ac_the-peach-edition_country_rgb_packrq-3055_cold_closed_front_com_full.png/m/352x0" alt="Peach Edition can"></div><h3>Peach Edition</h3><p>White Peach</p><button onclick="productInfo('Peach Edition')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/b44f42cfb0/us_ff_250ml_the-pink-edition_country_rgb_packrq-2064_cold_closed_front_com_full.png/m/352x0" alt="Pink Edition can"></div><h3>Pink Edition</h3><p>Wild Berries</p><button onclick="productInfo('Pink Edition')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/51b3b7127e/us_as_250ml_the-amber-edition_country_rgb__cold_closed_front_com_full.png/m/352x0" alt="Amber Edition can"></div><h3>Amber Edition</h3><p>Strawberry & Apricot</p><button onclick="productInfo('Amber Edition')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/31141b9a15/us_jb_250ml_the-sea-blue-edition_country_rgb_do242582_cold_closed_front_com_25.png/m/352x0" alt="Sea Blue Edition can"></div><h3>Sea Blue Edition</h3><p>Juneberry</p><button onclick="productInfo('Sea Blue Edition')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/c076e29890/us_cc_250ml_ac_the-coconut-edition_country_rgb__cold_closed_front_com_full.png/m/352x0" alt="Coconut Edition can"></div><h3>Coconut Edition</h3><p>Coconut & Berry</p><button onclick="productInfo('Coconut Edition')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/50f9e68454/us_yl_250ml_the-yellow-edition_country_rgb__cold_closed_front_com_25.png/m/352x0" alt="Yellow Edition can"></div><h3>Yellow Edition</h3><p>Tropical Fruits</p><button onclick="productInfo('Yellow Edition')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/7d77a8f904/us_wm_250ml_ac_the-red-edition_country_rgb__cold_closed_front_com_25.png/m/352x0" alt="Red Edition can"></div><h3>Red Edition</h3><p>Watermelon</p><button onclick="productInfo('Red Edition')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/79afbb6187/us_sf-sl_250ml_ac_the-summer-edition-sugarfree_country_rgb_packrq-3763_cold_closed_front_com_25.png/m/168x0" alt="Summer Edition Sugarfree can"></div><h3>Summer Edition Sugarfree</h3><p>Sudachi Lime — Sugarfree</p><button onclick="productInfo('Summer Edition Sugarfree')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/8c39bc6dc2/us_sf-igb_250ml_ac_the-iced-edition-sugarfree_country_rgb_packrq-3371_cold_closed_front_com_full.png/m/168x0" alt="Iced Edition Sugarfree can"></div><h3>Iced Edition Sugarfree</h3><p>Iced Vanilla Berry — Sugarfree</p><button onclick="productInfo('Iced Edition Sugarfree')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/b80a915d72/us_sf-wp_250ml_ac_the-peach-edition-sugarfree_country_rgb_packrq-3056_cold_closed_front_com_full.png/m/168x0" alt="Peach Edition Sugarfree can"></div><h3>Peach Edition Sugarfree</h3><p>White Peach — Sugarfree</p><button onclick="productInfo('Peach Edition Sugarfree')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/54293be9a2/us_sf-ff_250ml_the-pink-edition-sugarfree_country_rgb__cold_closed_front_com_25.png/m/168x0" alt="Pink Edition Sugarfree can"></div><h3>Pink Edition Sugarfree</h3><p>Wild Berries — Sugarfree</p><button onclick="productInfo('Pink Edition Sugarfree')">View details</button></article><article class="product reveal"><div class="product-photo"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/528x1348/d52df1907a/us_sf-jb_250ml_the-sea-blue-edition-sugarfree_country_rgb_packrq-2269_cold_closed_front_com_full.png/m/168x0" alt="Sea Blue Edition Sugarfree can"></div><h3>Sea Blue Edition Sugarfree</h3><p>Juneberry — Sugarfree</p><button onclick="productInfo('Sea Blue Edition Sugarfree')">View details</button></article></div>
-<p class="image-credit">Product images are loaded from Red Bull's official product image resources. Independent educational school project; not an official Red Bull website.</p>
+<section class="hero" id="home">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="intro.mp4" type="video/mp4">
+  </video>
+  <div class="video-shade"></div>
+  <div class="video-label">RED BULL <span>•</span> GIVES YOU WINGS</div>
+  <div class="copy hero-copy">
+    <div class="eyebrow">ENERGY IN MOTION</div>
+    <div class="edition" id="edition">ORIGINAL</div>
+    <h1 id="title">RED BULL</h1>
+    <h2>ENERGY DRINK</h2>
+    <p id="desc">The original Red Bull.<br>With the unique combination<br>of high-quality ingredients.</p>
+    <div><button class="nextBtn" id="nextMain">NEXT FLAVOR <b>→</b></button><a class="learn" href="#about">LEARN MORE</a></div>
+  </div>
+  <div class="stage">
+    <div class="glow g1"></div><div class="glow g2"></div>
+    <div class="can" id="can"><img id="mainCan" alt="Red Bull can"></div>
+    <div class="pedestal"><div class="pedSide"></div><div class="pedTop"></div><div class="pedRing"></div></div>
+  </div>
+  <button class="nextSide" id="nextSide">NEXT <b>→</b></button>
+  <div class="counter"><strong id="count">1</strong> / 18</div>
+  <div class="scroll-cue">SCROLL TO EXPLORE <span>↓</span></div>
 </section>
 
-<section class="section" id="experience"><div class="section-heading reveal"><p class="eyebrow">MORE THAN A DRINK</p><h2>ENERGY MEETS <span>ACTION.</span></h2></div>
-<div class="experience-grid"><div class="experience-card reveal"><span>01</span><h3>RACING</h3><p>Speed, competition and high-performance motorsport are a major part of the brand's identity.</p></div><div class="experience-card reveal"><span>02</span><h3>ADVENTURE</h3><p>From extreme sports to ambitious challenges, Red Bull connects its brand with adventure.</p></div><div class="experience-card reveal"><span>03</span><h3>MUSIC & CULTURE</h3><p>Events and creative projects help Red Bull connect with audiences beyond traditional advertising.</p></div></div></section>
+<section class="strip">
+  <button class="arrow" id="prev">←</button><div class="window"><div class="track" id="track"></div></div><button class="arrow" id="next">→</button>
+  <div class="dots" id="dots"></div>
+</section>
 
-<section class="section dark" id="gallery"><div class="section-heading reveal"><p class="eyebrow">REAL PRODUCT GALLERY</p><h2>SEE THE <span>RANGE.</span></h2></div>
-<div class="real-gallery">
-<div class="gallery-photo reveal"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/ad3b2bd89c/us_ed_250ml_energy-drink_country_rgb__cold_closed_front_com_25.png/m/168x0" alt="Original Red Bull Energy Drink"><span>ORIGINAL</span></div>
-<div class="gallery-photo reveal"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/e54b40774e/us_sf_250ml_sugarfree_country_rgb__cold_closed_front_com_25.png/m/168x0" alt="Red Bull Sugarfree"><span>SUGARFREE</span></div>
-<div class="gallery-photo reveal"><img src="https://www.redbull.com/energydrink/v1/resources/storyblok/images/f/287059/870x2200/deda1afb1a/us_zr_250ml_zero_country_rgb_packrq-1775_cold_closed_front_com_25.png/m/168x0" alt="Red Bull Zero"><span>ZERO</span></div>
-</div><p class="image-credit">Product images shown from Red Bull's official product pages. Independent educational school project; not an official Red Bull website.</p></section>
+<section class="stats"><div><b>1987</b><span>Brand launched</span></div><div><b>ENERGY</b><span>Everyday energy</span></div><div><b>GLOBAL</b><span>Worldwide presence</span></div><div><b>WINGS</b><span>Iconic slogan</span></div></section>
 
-<section class="section contact" id="contact"><div class="section-heading reveal"><p class="eyebrow">GET IN TOUCH</p><h2>READY TO <span>FLY?</span></h2></div>
-<form id="contactForm" class="contact-form reveal"><div class="form-row"><input id="name" type="text" placeholder="Your name" required><input id="email" type="email" placeholder="Your email" required></div><textarea id="message" placeholder="Write your message..." required></textarea><button class="btn primary" type="submit">SEND MESSAGE</button></form><p class="school-note">School project website • Educational use</p></section>
-</main>
-<footer><div class="footer-brand">🐂 <span>RED BULL</span></div><p>Gives You Wings.</p><div class="footer-links"><a href="#home">Home</a><a href="#products">Products</a><a href="#contact">Contact</a></div><small>© 2026 School Project. This site is an independent educational project and is not an official Red Bull website.</small></footer>
-<div class="toast" id="toast"></div><script src="script.js"></script></body></html>
+<section class="section" id="about">
+  <div class="heading"><small>THE BRAND</small><h2>BUILT FOR PEOPLE WHO <span>MOVE.</span></h2></div>
+  <div class="about">
+    <div>
+      <p>Red Bull is an energy drink brand founded in 1987. It has developed a strong identity around energy, action, sport, adventure, music and entertainment.</p>
+      <p>The brand is recognised for its distinctive cans, bold visual identity and the famous slogan <strong>“Gives You Wings.”</strong></p>
+      <p>This website is an independent Year 12 school advertising project showing how product presentation, interactive design and branding can work together to create a memorable digital experience.</p>
+    </div>
+    <div class="quote"><div>🐂</div><strong>GIVES YOU WINGS.</strong><small>Brand slogan</small></div>
+  </div>
+</section>
+
+<section class="section dark" id="products">
+  <div class="heading"><small>THE RANGE</small><h2>EXPLORE THE <span>FLAVORS.</span></h2><p>Explore the Red Bull products shown in the interactive experience. Seasonal products and availability can differ by country.</p></div>
+  <div class="products" id="productsGrid"></div>
+</section>
+
+<section class="section" id="experience">
+  <div class="heading"><small>MORE THAN A DRINK</small><h2>ENERGY MEETS <span>ACTION.</span></h2></div>
+  <div class="cards">
+    <article><i>01</i><h3>SPORT</h3><p>Red Bull has a strong connection with competitive sport, performance and athletic events.</p></article>
+    <article><i>02</i><h3>ADVENTURE</h3><p>The brand is associated with extreme sports, ambitious challenges and adventurous experiences.</p></article>
+    <article><i>03</i><h3>MUSIC & CULTURE</h3><p>Events and creative projects help the brand connect with audiences through music and culture.</p></article>
+  </div>
+</section>
+
+<section class="section dark" id="gallery">
+  <div class="heading"><small>THE WORLD OF RED BULL</small><h2>MAKE IT <span>COUNT.</span></h2></div>
+  <div class="gallery"><div><b>ENERGY</b></div><div><b>SPORT</b></div><div><b>ADVENTURE</b></div><div><b>RACING</b></div></div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="heading"><small>GET IN TOUCH</small><h2>READY TO <span>FLY?</span></h2></div>
+  <form id="form"><input required placeholder="Your name"><input required type="email" placeholder="Your email"><textarea required placeholder="Your message"></textarea><button class="nextBtn">SEND MESSAGE →</button></form>
+  <p class="school">Year 12 educational project</p>
+</section>
+
+<footer><div class="footerLogo">RED BULL</div><p>Gives You Wings.</p><div><a href="#home">Home</a><a href="#products">Flavors</a><a href="#contact">Contact</a></div><small>Independent educational school project — not an official Red Bull website.</small></footer>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
